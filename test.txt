@@ -1,0 +1,59 @@
+print "Hello, Aris!"
+print
+
+P := true
+Q := true
+R := true
+argument arg1 := (P & Q) => R
+valuate arg1
+
+P1 := true
+P2 := true
+S := true
+argument arg2 := P1, P2 => S
+valuate arg2
+print
+
+print "argument 'a' is invalid"
+argument a := !P, !P1, !P2 => Q
+validate a
+print
+
+print "argument 'b' is invalid"
+argument b := (P & !Q), (R & !S) => (Q | S)
+validate b
+print
+
+print "argument 'c' is valid"
+argument c := (P & !Q) => !(Q & R)
+validate c
+print
+
+print "argument 'd' is invalid"
+argument d := (P | Q) => P
+validate d
+print
+
+print "argument 'e' is valid"
+argument e := P, !(P & !Q) => Q
+validate e
+print
+
+print "argument 'f' is valid"
+argument f := (P -> Q), (Q -> R) => (P -> R)
+validate f
+print
+
+print "argument 'g' is invalid"
+argument g := ((P & Q) | R) => !(!P | !R)
+validate g
+print
+
+print "argument 't1' is NOT a tautology"
+argument t1 := ((P & (Q | R)) | (!P & (!Q | !R)))
+assert t1
+print
+
+print "argument 't2' is a tautology"
+argument t2 := (!(!(P & Q) & !(P & R)) | !(P & (Q | R)))
+assert t2
