@@ -114,7 +114,7 @@ static const TokenType valuate_tokens[] = {
 Token *create_and_token() {
     Token *t = malloc(sizeof(Token));
     t->type = TOKEN_AND;
-    t->value = strdup("∧");
+    t->value = strdup("&");
     return t;
 }
 
@@ -178,21 +178,21 @@ Token *create_left_bracket_token() {
 Token *create_material_implication_token() {
     Token *t = malloc(sizeof(Token));
     t->type = TOKEN_MATERIAL_IMPLICATION;
-    t->value = strdup("→");
+    t->value = strdup("->");
     return t;
 }
 
 Token *create_not_token() {
     Token *t = malloc(sizeof(Token));
     t->type = TOKEN_NOT;
-    t->value = strdup("¬");
+    t->value = strdup("!");
     return t;
 }
 
 Token *create_or_token() {
     Token *t = malloc(sizeof(Token));
     t->type = TOKEN_OR;
-    t->value = strdup("∨");
+    t->value = strdup("|");
     return t;
 }
 
@@ -220,7 +220,7 @@ Token *create_string_token(const char *value) {
 Token *create_therefore_token() {
     Token *t = malloc(sizeof(Token));
     t->type = TOKEN_THEREFORE;
-    t->value = strdup("∴");
+    t->value = strdup("=>");
     return t;
 }
 

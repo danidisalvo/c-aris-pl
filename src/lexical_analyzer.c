@@ -177,9 +177,8 @@ GQueue *tokenize(FILE *file, char **error) {
                                  "Unexpected symbol 'argument' at position %d of line '%s'",
                                  i, line);
                         return NULL;
-                    } else {
-                        n_argument++;
                     }
+                    n_argument++;
                     g_queue_push_tail(queue, create_argument_token());
                     i += strlen(k_argument);
                     found = true;
@@ -197,10 +196,9 @@ GQueue *tokenize(FILE *file, char **error) {
                                  "Unexpected symbol 'print' at position %d of line '%s'",
                                  i, line);
                         return NULL;
-                    } else {
-                        n_print++;
                     }
                     g_queue_push_tail(queue, create_print_token());
+                    n_print++;
                     i += strlen(k_print);
                     found = true;
                 } else if (
@@ -211,9 +209,8 @@ GQueue *tokenize(FILE *file, char **error) {
                                  "Unexpected symbol 'therefore' at position %d of line '%s'",
                                  i, line);
                         return NULL;
-                    } else {
-                        n_therefore++;
                     }
+                    n_therefore++;
                     g_queue_push_tail(queue, create_therefore_token());
                     i += strlen(k_therefore);
                     found = true;
@@ -233,10 +230,9 @@ GQueue *tokenize(FILE *file, char **error) {
                                  "Unexpected symbol 'valuate' at position %d of line '%s'",
                                  i, line);
                         return NULL;
-                    } else {
-                        n_valuate++;
                     }
                     g_queue_push_tail(queue, create_valuate_token());
+                    n_valuate++;
                     i += strlen(k_valuate);
                     found = true;
                 }
