@@ -117,8 +117,6 @@ GSList *determine_falsehood_conditions(Wff *wff) {
         list = g_slist_append(list, create_binary_condition(wff1_f_conds->data, wff2_f_conds->data));
     }
     return list;
-
-
 }
 
 GSList *determine_truthness_conditions(Wff *wff) {

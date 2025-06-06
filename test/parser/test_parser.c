@@ -318,7 +318,7 @@ void test_is_tautology() {
             create_disjunction(p, not_p));
     test_cases[i].result = TRUE;
 
-    // ((P ∧ (Q ∨ R)) ∨ (¬P ∧ (¬Q ∨ ¬R)))
+    // ((P ∧ (Q ∨ R)) ∨ (¬P ∧ (¬Q ∧ ¬R)))
     i++;
     test_cases[i].argument = create_argument();
     test_cases[i].argument->premises = g_slist_append(
