@@ -1,12 +1,15 @@
 print "Hello, Aris!"
 print
 
+print "argument arg1 is true"
 P := true
 Q := true
 R := true
 argument arg1 := (P & Q) => R
 valuate arg1
+print
 
+print "argument arg2 is true"
 P1 := true
 P2 := true
 S := true
